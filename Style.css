@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #004aad;
+  font-size: 2em;
+  text-align: center;
+}
+
+h2 {
+  color: #1e3a8a;
+  margin-top: 2em;
+  border-bottom: 2px solid #1e3a8a;
+  padding-bottom: 5px;
+}
+
+div.about,
+div.skills,
+div.projects,
+div.contact {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  color: #004aad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
