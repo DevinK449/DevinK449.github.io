@@ -43,6 +43,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* === Project Section Styling (PM2 and future projects) === */
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -59,8 +60,6 @@ a:hover {
   padding: 20px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  max-width: 780px;
-  margin: 0 auto;
 }
 
 .project:hover {
@@ -68,13 +67,11 @@ a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.project a img {
-  width: auto !important;
-  max-width: 70%;
+.project img {
+  width: 70%;
   height: auto;
   border-radius: 10px;
-  margin: 12px auto;
-  display: block;
+  margin-top: 10px;
 }
 
 .project details {
@@ -91,6 +88,7 @@ a:hover {
 .project summary:hover {
   text-decoration: underline;
 }
+
 
 
 
