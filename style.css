@@ -59,6 +59,8 @@ a:hover {
   padding: 20px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .project:hover {
@@ -66,11 +68,13 @@ a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.project img {
-  width: 10%;
+.project a img {
+  width: auto !important;
+  max-width: 60%;
   height: auto;
   border-radius: 10px;
-  margin-top: 10px;
+  margin: 12px auto;
+  display: block;
 }
 
 .project details {
@@ -87,6 +91,7 @@ a:hover {
 .project summary:hover {
   text-decoration: underline;
 }
+
 
 
 
