@@ -43,7 +43,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* === Project Section Styling (PM2 and future projects) === */
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -88,3 +87,4 @@ a:hover {
 .project summary:hover {
   text-decoration: underline;
 }
+
