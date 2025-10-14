@@ -70,7 +70,7 @@ a:hover {
 
 .project a img {
   width: auto !important;
-  max-width: 60%;
+  max-width: 40%;
   height: auto;
   border-radius: 10px;
   margin: 12px auto;
@@ -91,6 +91,7 @@ a:hover {
 .project summary:hover {
   text-decoration: underline;
 }
+
 
 
 
