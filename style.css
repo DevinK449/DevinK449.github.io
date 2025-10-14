@@ -68,7 +68,7 @@ a:hover {
 }
 
 .project img {
-  width: 70%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   margin-top: 10px;
@@ -88,6 +88,7 @@ a:hover {
 .project summary:hover {
   text-decoration: underline;
 }
+
 
 
 
