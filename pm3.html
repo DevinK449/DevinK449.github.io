@@ -6,59 +6,47 @@
   <title>Project Management 3 — Affinity Diagram</title>
   <style>
     :root {
-      --bg: #0f172a;         /* slate-900 */
-      --panel: #111827;      /* gray-900 */
-      --muted: #94a3b8;      /* slate-400 */
-      --ink: #e5e7eb;        /* gray-200 */
-      --accent: #22d3ee;     /* cyan-400 */
-      --note-yellow: #fef3c7;/* amber-100 */
-      --note-green: #dcfce7; /* green-100 */
-      --note-pink: #ffe4e6;  /* rose-100 */
-      --note-blue: #dbeafe;  /* blue-100 */
+      --bg: #0f172a;
+      --panel: #111827;
+      --muted: #94a3b8;
+      --ink: #e5e7eb;
+      --accent: #22d3ee;
+      --note-yellow: #fef3c7;
+      --note-green: #dcfce7;
+      --note-pink: #ffe4e6;
+      --note-blue: #dbeafe;
       --shadow: 0 10px 25px rgba(0,0,0,.35);
     }
     html,body { height:100%; }
     body {
-      margin: 0; background: radial-gradient(1200px 900px at 10% -10%, #1f2937 0%, var(--bg) 65%);
-      color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      margin: 0;
+      background: radial-gradient(1200px 900px at 10% -10%, #1f2937 0%, var(--bg) 65%);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
     .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
-    header {
-      display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;
-    }
+    header { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
     h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.1; margin: 0; }
-    .meta { display:flex; flex-wrap:wrap; gap:10px; color: var(--muted); font-size: 14px; }
+    .meta { color: var(--muted); font-size: 14px; }
     .card {
       background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
       border: 1px solid rgba(255,255,255,.08);
-      border-radius: 18px; padding: 18px 18px; box-shadow: var(--shadow);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
     }
-    .problem { margin-bottom: 18px; }
-    .problem h2 { margin: 0 0 8px; font-size: 18px; color: var(--accent); }
-    .problem p { margin: 0; color: var(--ink); }
-
+    .problem h2 { color: var(--accent); margin-bottom: 8px; }
     .board { display: grid; gap: 16px; grid-template-columns: repeat(4, minmax(0,1fr)); }
     @media (max-width: 1000px) { .board { grid-template-columns: repeat(2,1fr);} }
     @media (max-width: 640px) { .board { grid-template-columns: 1fr; } }
-
     .col { display:flex; flex-direction: column; gap: 12px; min-height: 220px; }
     .col h3 { margin: 0; font-size: 16px; color: var(--accent); letter-spacing:.2px; }
-
     .notes { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
     .note { border-radius: 12px; padding: 12px 14px; color: #0b1020; box-shadow: 0 8px 18px rgba(2,6,23,.35); border: 1px dashed rgba(2,6,23,.18); }
     .note[data-color="yellow"] { background: var(--note-yellow); }
     .note[data-color="green"]  { background: var(--note-green); }
     .note[data-color="pink"]   { background: var(--note-pink); }
     .note[data-color="blue"]   { background: var(--note-blue); }
-
-    .toolbar { display:flex; gap:10px; flex-wrap: wrap; align-items:center; margin: 22px 0 8px; }
-    .toolbar button, .toolbar select {
-      background:#0b1220; color:var(--ink); border:1px solid rgba(255,255,255,.1);
-      border-radius:10px; padding:8px 12px; font: inherit; cursor:pointer;
-    }
-    .toolbar input[type="text"] { flex:1; min-width: 160px; background:#0b1220; color:var(--ink); border:1px solid rgba(255,255,255,.1); border-radius:10px; padding:8px 12px; }
-    .toolbar label { color: var(--muted); font-size: 14px; }
-    .help { color: var(--muted); font-size: 14px; line-height: 1.5; }
     footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
     a { color: var(--accent); text-decoration: none; }
   </style>
@@ -67,112 +55,69 @@
   <div class="wrap">
     <header>
       <h1>Affinity Diagram — Project Management 3</h1>
-      <div class="meta">Edit this page to show your teams' clusters from PM2.</div>
+      <div class="meta">Our team used this diagram to organize ideas and insights from PM2.</div>
     </header>
 
-    <section class="card problem" id="problem">
+    <section class="card problem">
       <h2>Problem Statement</h2>
-      <p id="problemText" contenteditable="true"><strong>TODO:</strong> Paste your exact PM2 problem statement here. Keep it to 1–3 sentences.</p>
+      <p>Students at the University of South Carolina who use multiple platforms such as Blackboard, GitHub, and Discord for schoolwork need one central location to view all their assignments, deadlines, and group tasks so they don’t lose track or miss important work.</p>
     </section>
 
-    <div class="toolbar card">
-      <label for="colSelect">Add sticky to:</label>
-      <select id="colSelect" aria-label="Choose category column">
-        <option value="col1">Category 1</option>
-        <option value="col2">Category 2</option>
-        <option value="col3">Category 3</option>
-        <option value="col4">Category 4</option>
-      </select>
-      <input id="noteInput" type="text" placeholder="Type a quick idea / observation and press +" />
-      <select id="colorSelect" aria-label="Sticky color">
-        <option value="yellow">Yellow</option>
-        <option value="green">Green</option>
-        <option value="blue">Blue</option>
-        <option value="pink">Pink</option>
-      </select>
-      <button id="addBtn" title="Add sticky">＋</button>
-      <button id="downloadBtn" title="Export as HTML">Export</button>
-    </div>
+    <main class="board">
 
-    <main class="board" id="board">
-      <!-- Duplicate/rename categories as needed -->
       <section class="col card" id="col1">
-        <h3 contenteditable="true">Category 1 — Root Causes</h3>
+        <h3>Category 1 — Root Causes</h3>
         <ul class="notes">
-          <li class="note" data-color="yellow" contenteditable="true">Example sticky: unclear requirements</li>
-          <li class="note" data-color="blue" contenteditable="true">Example sticky: tool friction</li>
+          <li class="note" data-color="yellow">Too many platforms for coursework communication</li>
+          <li class="note" data-color="yellow">Lack of integration between Blackboard, GitHub, and Discord</li>
+          <li class="note" data-color="blue">Students forget to check all apps daily</li>
+          <li class="note" data-color="pink">No central reminder or alert system</li>
+          <li class="note" data-color="blue">Hard to keep track of group progress</li>
         </ul>
       </section>
+
       <section class="col card" id="col2">
-        <h3 contenteditable="true">Category 2 — Constraints</h3>
+        <h3>Category 2 — Constraints</h3>
         <ul class="notes">
-          <li class="note" data-color="pink" contenteditable="true">Example sticky: limited time</li>
+          <li class="note" data-color="pink">Limited time for students to manage multiple tasks</li>
+          <li class="note" data-color="yellow">Different systems require separate logins</li>
+          <li class="note" data-color="blue">Mobile versions of apps are not equally reliable</li>
+          <li class="note" data-color="pink">Students rely on inconsistent group communication</li>
         </ul>
       </section>
+
       <section class="col card" id="col3">
-        <h3 contenteditable="true">Category 3 — Opportunities</h3>
+        <h3>Category 3 — Opportunities</h3>
         <ul class="notes">
-          <li class="note" data-color="green" contenteditable="true">Example sticky: automate a manual step</li>
+          <li class="note" data-color="green">Create a unified dashboard to view all due dates and tasks</li>
+          <li class="note" data-color="green">Integrate GitHub deadlines with Blackboard calendar</li>
+          <li class="note" data-color="yellow">Add push notifications for upcoming due dates</li>
+          <li class="note" data-color="blue">Improve collaboration with shared progress tracking</li>
+          <li class="note" data-color="green">Use APIs to sync data automatically between apps</li>
         </ul>
       </section>
+
       <section class="col card" id="col4">
-        <h3 contenteditable="true">Category 4 — Ideas</h3>
+        <h3>Category 4 — Ideas & Solutions</h3>
         <ul class="notes">
-          <li class="note" data-color="yellow" contenteditable="true">Example sticky: short demo videos</li>
+          <li class="note" data-color="green">Develop a web app that connects Blackboard, GitHub, and Discord</li>
+          <li class="note" data-color="yellow">Implement color-coded assignment lists by class</li>
+          <li class="note" data-color="blue">Add notifications through Discord bots or email alerts</li>
+          <li class="note" data-color="pink">Include a group chat and task status tracker</li>
+          <li class="note" data-color="green">Allow professors to post announcements through one integrated hub</li>
         </ul>
       </section>
+
     </main>
 
     <section class="card" style="margin-top:16px;">
       <h3 style="margin-top:0">How to use</h3>
-      <p class="help">Rename categories by clicking their titles. Add new stickies with the toolbar. You can also edit any sticky inline. Duplicate a category by copying a <code>&lt;section class="col"...&gt;</code> block in the HTML.
-      </p>
+      <p>These clusters summarize what we observed in PM2: the <strong>Root Causes</strong> of disorganization, <strong>Constraints</strong> that make it difficult to manage multiple platforms, <strong>Opportunities</strong> for streamlining information, and final <strong>Ideas & Solutions</strong> for improvement.</p>
     </section>
 
     <footer>
-      <p>Tip: In GitHub Pages, link to this file from your main <code>index.html</code> (e.g., <code>pm3.html</code>) so graders can find it easily.</p>
+      <p>Created by Devin King | CSCE 190 – Project Management 3 | University of South Carolina</p>
     </footer>
   </div>
-
-  <script>
-    const addBtn = document.getElementById('addBtn');
-    const noteInput = document.getElementById('noteInput');
-    const colSelect = document.getElementById('colSelect');
-    const colorSelect = document.getElementById('colorSelect');
-    const downloadBtn = document.getElementById('downloadBtn');
-
-    function addNote() {
-      const text = noteInput.value.trim();
-      if (!text) return;
-      const col = document.getElementById(colSelect.value);
-      const ul = col.querySelector('.notes');
-      const li = document.createElement('li');
-      li.className = 'note';
-      li.setAttribute('data-color', colorSelect.value);
-      li.contentEditable = 'true';
-      li.textContent = text;
-      ul.appendChild(li);
-      noteInput.value = '';
-      noteInput.focus();
-    }
-
-    addBtn.addEventListener('click', addNote);
-    noteInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        addNote();
-      }
-    });
-
-    downloadBtn.addEventListener('click', () => {
-      const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'pm3-affinity-diagram.html';
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-  </script>
 </body>
 </html>
