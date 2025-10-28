@@ -1,100 +1,166 @@
+/* ---------- THEME (light / dark) ---------- */
+:root{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --heading:#1e3a8a;
+  --accent:#6d28d9;
+  --muted:#6b7280;
+  --radius:12px;
+  --shadow:0 2px 10px rgba(0,0,0,.08);
+  --shadow-hover:0 8px 24px rgba(0,0,0,.14);
+  --border:#e5e7eb;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1020;
+    --card:#0f172a;
+    --text:#e5e7eb;
+    --heading:#93c5fd;
+    --accent:#a78bfa;
+    --muted:#9ca3af;
+    --border:#1f2937;
+    --shadow:0 2px 10px rgba(0,0,0,.45);
+    --shadow-hover:0 10px 30px rgba(0,0,0,.55);
+  }
+}
+
+/* ---------- GLOBAL ---------- */
+*,
+*::before,
+*::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
 body{
   font-family: Arial, Helvetica, sans-serif;
   margin:40px;
-  background-color:var(--bg);
+  background:var(--bg);
   color:var(--text);
-  line-height:1.6;
+  line-height:1.65;
 }
 
+img{ max-width:100%; height:auto; }
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none!important; transition:none!important; }
+}
+
+/* ---------- HEADINGS ---------- */
 h1{
   color:var(--accent);
-  font-size:2em;
+  font-size:clamp(1.8rem, 2.6vw, 2.3rem);
   text-align:center;
-  margin:0 0 10px;
+  margin:0 0 12px;
+  letter-spacing:.2px;
 }
 
 h2{
   color:var(--heading);
-  margin-top:2em;
+  margin:2.2rem 0 .75rem;
+  padding-bottom:.5rem;
   border-bottom:2px solid var(--heading);
-  padding-bottom:5px;
 }
 
+/* ---------- SECTIONS / CARDS ---------- */
 div.about,
 div.skills,
 div.projects,
 div.contact{
   background:var(--card);
-  padding:16px 20px;
-  border-radius:8px;
-  box-shadow:0 2px 6px rgba(0,0,0,.1);
-  margin-top:10px;
+  padding:18px 22px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
 }
 
-p{ margin:10px 0; }
+p{ margin:10px 0; color:var(--text); }
 
+/* ---------- LINKS ---------- */
 a{
   color:var(--accent);
   text-decoration:none;
 }
-a:hover{ text-decoration:underline; }
+a:hover,
+.project summary:hover{ text-decoration:underline; }
 
+/* ---------- PROJECT GRID ---------- */
 .projects{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:25px;
-  padding:10px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:26px;
+  padding:12px;
 }
 
 .project{
-  width:clamp(280px, 32%, 520px);
   background:var(--card);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
+  border:1px solid var(--border);
   padding:20px;
   text-align:center;
   transition:transform .18s ease, box-shadow .18s ease;
-  margin-inline:auto;            
 }
 
 .project:hover{
   transform:translateY(-4px);
-  box-shadow:0 4px 16px rgba(0,0,0,.15);
+  box-shadow:var(--shadow-hover);
 }
 
+/* Project title inside link */
+.project h3{
+  margin:0;
+  font-size:1.05rem;
+  color:var(--text);
+}
+
+/* Project image */
 .project a img{
-  width:auto !important;          
-  max-width:420px;                
-  height:auto;
   display:block;
+  width:100%;
+  max-width:480px;
   margin:12px auto;
   border-radius:10px;
+  border:1px solid var(--border);
+  box-shadow:0 1px 8px rgba(0,0,0,.06);
 }
 
-
+/* Details/summary */
 .project details{
   text-align:left;
-  margin-top:10px;
+  margin-top:12px;
 }
 .project summary{
   cursor:pointer;
   color:var(--accent);
   font-weight:bold;
+  list-style:none; /* remove default triangle in some browsers */
 }
-.project summary:hover{ text-decoration:underline; }
 
-
+/* ---------- CONTACT ---------- */
 .contact p{ margin:0; }
 
+/* ---------- UTILITIES ---------- */
+.muted{ color:var(--muted); font-size:.95rem; }
 
-@media (max-width: 640px){
-  body{ margin:24px; }
-  .project{
-    width:100%;
-    max-width:520px;
-  }
-  .project a img{
-    max-width:90vw;               
-  }
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 720px){
+  body{ margin:26px; }
+  .project a img{ max-width:92vw; }
+}
+
+@media (max-width: 420px){
+  body{ margin:18px; }
+  h1{ font-size:1.6rem; }
+  .project{ padding:16px; }
+}
+
+/* ---------- PRINT ---------- */
+@media print{
+  body{ background:#fff; color:#000; margin:0; }
+  a{ color:#000; text-decoration:underline; }
+  .projects{ gap:16px; }
+  .project{ box-shadow:none; border:1px solid #bbb; }
 }
