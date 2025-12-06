@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Devin King - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --text: #222222;
+      --muted: #555555;
+      --accent: #004b8d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card);
+      padding: 24px 32px 28px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      border-radius: 6px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;  /* bigger name */
+      margin: 0 0 6px;
+      letter-spacing: 0.08em;
+    }
+
+    header .contact {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    header .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    header .contact a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      margin: 18px 0 4px;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 2px;
+      text-transform: uppercase;
+    }
+
+    .section {
+      margin-bottom: 10px;
+    }
+
+    .job,
+    .project,
+    .item-row {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .job-title,
+    .project-title,
+    .item-main {
+      font-weight: bold;
+    }
+
+    .job-meta,
+    .project-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 4px 0 4px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 2px;
+    }
+
+    .inline-list {
+      margin: 4px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .inline-list li::before {
+      content: "• ";
+    }
+
+    .inline-list li {
+      display: inline;
+      margin-right: 4px;
+    }
+
+    /* tighten bottom space so no big white chunk in PDF */
+    .page:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>DEVIN KING</h1>
+      <div class="contact">
+        Columbia, SC •
+        <a href="mailto:devink@email.sc.edu">devink@email.sc.edu</a> •
+        704-221-3526 •
+        <a href="https://github.com/DevinK449" target="_blank">github.com/DevinK449</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="item-row">
+        <div class="item-main">University of South Carolina — Columbia, SC</div>
+        <div class="job-meta">B.S. in Information Technology (Cybersecurity focus), Expected May 2027</div>
+      </div>
+      <div class="item-row">
+        <span class="item-main">Relevant Coursework:</span>
+        Systems Security, Unix/Linux Fundamentals, Data Structures (C++),
+        Networking, Principles of Management
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="item-row">
+        <span class="item-main">Languages:</span>
+        C++, Python, HTML/CSS/JavaScript, SQL, Bash
+      </div>
+      <div class="item-row">
+        <span class="item-main">Automation / IT Ops:</span>
+        Jira &amp; Freshservice automations, Google Apps Script, BetterCloud, Okta Workflows
+      </div>
+      <div class="item-row">
+        <span class="item-main">Tools:</span>
+        Git/GitHub, VS Code, R, Wireshark
+      </div>
+      <div class="item-row">
+        <span class="item-main">Platforms:</span>
+        Linux, Windows, Google Workspace
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-title">IT Automation Intern — Druva (Remote/Columbia, SC)</div>
+        <div class="job-meta">Aug 2022 – Present</div>
+        <ul>
+          <li>Built Jira automation rules and custom fields to streamline PricingOps workflows, reducing manual triage time by ~30%.</li>
+          <li>Developed Google Chat bots and Apps Script services to post ticket updates and approvals into team rooms.</li>
+          <li>Improved provisioning processes using Okta Workflows and BetterCloud to reduce escalations and manual effort.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Server — Longhorn Steakhouse</div>
+        <div class="job-meta">Jul 2021 – Jan 2022</div>
+        <ul>
+          <li>Served customers in a fast-paced environment and trained new hires on procedures.</li>
+          <li>Collaborated with staff to ensure accurate and timely service during peak hours.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <div class="project-title">CSCE 240 C++ Utilities (USC) — 2025</div>
+        <ul>
+          <li>Implemented OOP modules and unit tests; automated builds with Make.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Helpdesk Script Toolkit (Google Apps Script) — 2025</div>
+        <ul>
+          <li>Wrote utilities to query Freshservice API and post status updates to Google Chat.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Activities &amp; Leadership</h2>
+      <ul>
+        <li>Appalachian Information Technology Professionals (AppITP) Secretary; organized events and created promotional materials.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
