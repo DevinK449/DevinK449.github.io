@@ -1,1 +1,52 @@
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #111827;
+  margin: 0;
+}
+
+#content {
+  width: 850px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 2px solid #1d4ed8;
+}
+
+#title {
+  color: #1d4ed8;
+}
+
+#subtitle {
+  color: #b91c1c;
+}
+
+#pics-title, #table-title {
+  color: #0f766e;
+}
+
+img {
+  width: 300px;
+  margin: 10px;
+  padding: 6px;
+  border: 2px solid #b91c1c;
+}
+
+#movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#movie-table th,
+#movie-table td {
+  border: 1px solid #111827;
+  padding: 8px;
+}
+
+#movie-table th {
+  background-color: #dbeafe;
+}
