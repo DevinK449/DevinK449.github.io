@@ -1,0 +1,29 @@
+/* Main Structure */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #bde0fe;
+}
+
+#main-content {
+    background: #cdb4db;
+    width:80%;
+    margin:auto;      /* Center */
+    padding:5px 10px;
+}
+
+#main-header {
+
+}
+
+#content {
+
+}
+
+#main-footer {
+
+}
+/* Navigation */
+#main-nav {
+    
+}
+/* Typography */
