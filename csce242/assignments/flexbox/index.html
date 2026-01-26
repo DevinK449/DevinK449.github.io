@@ -1,105 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flexbox Layout</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <h1>Layout with Flex</h1>
-  </header>
+<html>
+    <head>
+        <title>Flex Demo</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="main-content">
+            <header id="main-header">
+                <h1>Layout with Flex</h1>
 
-  <nav class="site-nav">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Staff</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </nav>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Staff</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-  <main class="page">
-    <section class="top">
-      <section class="important">
-        <h2>This is very important text</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua.
-        </p>
-      </section>
+            <main id="content">
+                <!-- TOP SECTION -->
+                <div id="top" class="columns">
+                    <section id="important" class="one">
+                        <h2>This is very important text</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </section>
 
-      <aside class="cards">
-        <article class="card">
-          <h3>Title 1</h3>
-          <img src="https://dummyimage.com/200x300/000/fff.png&text=200x300" alt="Placeholder 200 by 300" />
-        </article>
+                    
+                    <div id="gallery" class="columns one">
+                        <section class="card one">
+                            <h3>Title 1</h3>
+                            <img src="https://dummyimage.com/200x300/000/fff.png&text=200x300" alt="200x300">
+                        </section>
 
-        <article class="card">
-          <h3>Title 2</h3>
-          <img src="https://dummyimage.com/200x300/000/fff.png&text=200x300" alt="Placeholder 200 by 300" />
-        </article>
+                        <section class="card one">
+                            <h3>Title 2</h3>
+                            <img src="https://dummyimage.com/200x300/000/fff.png&text=200x300" alt="200x300">
+                        </section>
 
-        <article class="card">
-          <h3>Title 3</h3>
-          <img src="https://dummyimage.com/200x300/000/fff.png&text=200x300" alt="Placeholder 200 by 300" />
-        </article>
+                        <section class="card one">
+                            <h3>Title 3</h3>
+                            <img src="https://dummyimage.com/200x300/000/fff.png&text=200x300" alt="200x300">
+                        </section>
 
-        <article class="card">
-          <h3>Title 4</h3>
-          <img src="https://dummyimage.com/200x300/000/fff.png&text=200x300" alt="Placeholder 200 by 300" />
-        </article>
-      </aside>
-    </section>
+                        <section class="card one">
+                            <h3>Title 4</h3>
+                            <img src="https://dummyimage.com/200x300/000/fff.png&text=200x300" alt="200x300">
+                        </section>
+                    </div>
+                </div>
 
-    <section class="ideas">
-      <article class="idea idea-1">
-        <div class="block big"></div>
-        <div class="block small">
-          <img src="https://dummyimage.com/200x200/000/fff.png&text=200x200" alt="Placeholder 200 by 200" />
+                
+                <div id="ideas">
+                    <section class="idea columns">
+                        <div class="big two"></div>
+
+                        <div class="small one">
+                            <img src="https://dummyimage.com/200x200/000/fff.png&text=200x200" alt="200x200">
+                        </div>
+
+                        <section class="idea-text three">
+                            <h3>Idea 1</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </section>
+                    </section>
+
+                    <section class="idea columns reverse">
+                        <section class="idea-text three">
+                            <h3>Idea 2</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </section>
+
+                        <div class="small one">
+                            <img src="https://dummyimage.com/200x200/000/fff.png&text=200x200" alt="200x200">
+                        </div>
+
+                        <div class="wide two"></div>
+                    </section>
+
+                    <section class="idea columns">
+                        <div class="big two"></div>
+
+                        <div class="small one">
+                            <img src="https://dummyimage.com/200x200/000/fff.png&text=200x200" alt="200x200">
+                        </div>
+
+                        <section class="idea-text three">
+                            <h3>Idea 3</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </section>
+                    </section>
+                </div>
+            </main>
+
+            <footer id="main-footer">
+                <p>@portiaplante.com</p>
+            </footer>
         </div>
-        <section class="idea-text">
-          <h3>Idea 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </p>
-        </section>
-      </article>
-
-      <article class="idea idea-2">
-        <section class="idea-text">
-          <h3>Idea 2</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </p>
-        </section>
-        <div class="block small">
-          <img src="https://dummyimage.com/200x200/000/fff.png&text=200x200" alt="Placeholder 200 by 200" />
-        </div>
-        <div class="block wide"></div>
-      </article>
-
-      <article class="idea idea-3">
-        <div class="block big"></div>
-        <div class="block small">
-          <img src="https://dummyimage.com/200x200/000/fff.png&text=200x200" alt="Placeholder 200 by 200" />
-        </div>
-        <section class="idea-text">
-          <h3>Idea 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </p>
-        </section>
-      </article>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>@portiaplante.com</p>
-  </footer>
-</body>
+    </body>
 </html>
+
