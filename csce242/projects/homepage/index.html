@@ -3,65 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homepage</title>
+  <title>Simply Savory | Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="header">
     <div class="container header-inner">
-      <div class="brand">Your Brand</div>
+      <a class="brand" href="index.html">
+        <span class="brand-badge"></span>
+        <span>Simply Savory</span>
+      </a>
       <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">About</a>
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
         <a href="#">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="container">
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Your Headline</h1>
-          <p>Your short description that matches the wireframe.</p>
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h1>Delicious, High-Quality Meals Made Simple</h1>
+          <p>Discover quick, delicious recipes for everyday cooking. Find simple and speedy meals for busy days.</p>
           <div class="hero-actions">
-            <a class="btn" href="#">Primary</a>
-            <a class="btn btn-outline" href="#">Secondary</a>
+            <a class="btn" href="recipes.html">Browse Recipes</a>
+            <a class="btn btn-outline" href="categories.html">Explore Categories</a>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature">
+              <h4>Quick & Easy</h4>
+              <p>Find simple and speedy recipes for busy days.</p>
+            </div>
+            <div class="feature">
+              <h4>Categories</h4>
+              <p>Browse by Breakfast, Lunch, Dinner, and more.</p>
+            </div>
+            <div class="feature">
+              <h4>Popular</h4>
+              <p>Check out our most loved recipes.</p>
+            </div>
+            <div class="feature">
+              <h4>Recipes</h4>
+              <p>Discover a variety of delicious recipes.</p>
+            </div>
           </div>
         </div>
 
-        <div class="hero-media">
-          <img src="images/hero.jpg" alt="Hero image">
+        <div class="hero-right">
+          <img src="https://placehold.co/900x650?text=Hero+Food+Image" alt="Food collage">
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <h2>Section Title</h2>
+      <h2 class="section-title">Explore Our Categories</h2>
+      <p class="section-subtitle">Find inspiration for your next meal. Browse by category to quickly find what you want.</p>
 
-        <div class="grid">
-          <article class="card">
-            <h3>Card Title</h3>
-            <p>Card text…</p>
-          </article>
-          <article class="card">
-            <h3>Card Title</h3>
-            <p>Card text…</p>
-          </article>
-          <article class="card">
-            <h3>Card Title</h3>
-            <p>Card text…</p>
-          </article>
-        </div>
+      <div class="cat-grid">
+        <a class="cat" href="categories.html">
+          <img src="https://placehold.co/600x400?text=Breakfast" alt="Breakfast">
+          <div class="label">Breakfast</div>
+        </a>
+        <a class="cat" href="categories.html">
+          <img src="https://placehold.co/600x400?text=Lunch" alt="Lunch">
+          <div class="label">Lunch</div>
+        </a>
+        <a class="cat" href="categories.html">
+          <img src="https://placehold.co/600x400?text=Dinner" alt="Dinner">
+          <div class="label">Dinner</div>
+        </a>
+        <a class="cat" href="categories.html">
+          <img src="https://placehold.co/600x400?text=Quick+%26+Easy" alt="Quick & Easy">
+          <div class="label">Quick & Easy</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Featured Recipes</h2>
+      <p class="section-subtitle">A few popular picks to get you started.</p>
+
+      <div class="recipe-grid-3">
+        <a class="card" href="recipe.html">
+          <img class="recipe-thumb" src="https://placehold.co/900x600?text=Creamy+Garlic+Pasta" alt="Creamy Garlic Pasta">
+          <div class="card-body">
+            <div class="kicker">20 minutes</div>
+            <div class="h3">Creamy Garlic Pasta</div>
+            <p class="p">Rich and creamy pasta with fresh garlic and parmesan.</p>
+          </div>
+        </a>
+
+        <a class="card" href="recipes.html">
+          <img class="recipe-thumb" src="https://placehold.co/900x600?text=Chicken+Stir-Fry" alt="Chicken Stir-Fry">
+          <div class="card-body">
+            <div class="kicker">25 minutes</div>
+            <div class="h3">Chicken Stir-Fry</div>
+            <p class="p">Quick and healthy stir fry packed with vegetables.</p>
+          </div>
+        </a>
+
+        <a class="card" href="recipes.html">
+          <img class="recipe-thumb" src="https://placehold.co/900x600?text=Classic+Pancakes" alt="Classic Pancakes">
+          <div class="card-body">
+            <div class="kicker">20 minutes</div>
+            <div class="h3">Classic Pancakes</div>
+            <p class="p">Fluffy homemade pancakes topped with fresh fruit.</p>
+          </div>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-inner">
-      <p>© 2026 Your Name</p>
+      <div>© 2026 Simply Savory</div>
+      <div><a href="about.html">About</a> · <a href="#">Contact</a></div>
     </div>
   </footer>
 </body>
