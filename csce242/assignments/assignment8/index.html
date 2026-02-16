@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 8</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="page">
+    <header>
+      <h1>Assignment 8</h1>
+      <h2>If Statements</h2>
+
+      <nav id="nav">
+        <button id="menuToggle" aria-label="Toggle menu">
+          <span id="arrow">▼</span>
+        </button>
+
+        <ul id="menuItems">
+          <li><a href="#" id="ex1Link">Exercise 1</a></li>
+          <li><a href="#" id="ex2Link">Exercise 2</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Exercise 1 -->
+      <section id="exercise1" class="content-box">
+        <h3>How many minutes until class?</h3>
+
+        <div class="slider-wrap">
+          <input type="range" id="minutesRange" min="0" max="60" value="24">
+        </div>
+
+        <p id="rangeValue" class="big-text"></p>
+        <p id="rangeMessage" class="message"></p>
+      </section>
+
+      <!-- Exercise 2 -->
+      <section id="exercise2" class="content-box hidden">
+        <h3>Countdown till class</h3>
+        <p id="countdownMessage" class="message"></p>
+      </section>
+    </main>
+
+    <footer>@DevinKing.com</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

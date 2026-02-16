@@ -1,0 +1,158 @@
+:root {
+  --page-bg: #0f172a;
+  --card-bg: #1e293b;
+  --border: #38bdf8;
+  --title: #facc15;
+  --subtitle: #fb7185;
+  --text: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: black;
+  color: var(--text);
+}
+
+#page {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 22px;
+  background: var(--page-bg);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 44px;
+  color: var(--title);
+}
+
+h2 {
+  margin: 10px 0 14px;
+  color: var(--subtitle);
+}
+
+h3 {
+  margin: 0 0 18px;
+  color: var(--title);
+}
+
+/* Nav */
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+#menuToggle {
+  display: none; /* only show on small screens */
+  border: 2px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#menuItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 18px;
+}
+
+#menuItems li a {
+  color: var(--border);
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#menuItems li a:hover {
+  color: var(--title);
+}
+
+/* Pipe separators for large menu using CSS */
+#menuItems li:not(:last-child)::after {
+  content: " |";
+  color: var(--text);
+  margin-left: 18px;
+}
+
+/* Main box */
+.content-box {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  padding: 28px 18px;
+  margin: 0 auto;
+  max-width: 850px;
+  min-height: 140px;
+}
+
+.slider-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 12px;
+}
+
+input[type="range"] {
+  width: 260px;
+}
+
+.big-text {
+  font-size: 18px;
+  margin: 10px 0;
+  color: var(--text);
+}
+
+.message {
+  margin: 0;
+  color: var(--border);
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 16px;
+  color: var(--title);
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Small screens: toggle menu, vertical items */
+@media (max-width: 700px) {
+  #nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menuToggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #menuItems {
+    display: none;        /* initially hidden */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  #menuItems.open {
+    display: flex;
+  }
+
+  /* remove the pipes on mobile */
+  #menuItems li:not(:last-child)::after {
+    content: "";
+    margin: 0;
+  }
+}
