@@ -1,89 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simply Savory | Creamy Garlic Pasta</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creamy Garlic Pasta — Simply Savory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-badge"></span>
-        <span>Simply Savory</span>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🍽</span>
+        Simply Savory
       </a>
-      <nav class="nav">
+      <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="recipes.html">Recipes</a>
+        <a href="recipes.html" class="active">Recipes</a>
         <a href="categories.html">Categories</a>
         <a href="about.html">About</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="page-head">
-      <h1>Creamy Garlic Pasta</h1>
-      <p>A rich and comforting pasta dish made with garlic, cream, and parmesan — perfect for an easy weeknight meal.</p>
-      <div class="recipe-meta">
-        <span>20 minutes</span>
-        <span>Serves 2–3</span>
-        <span>4.8 (78)</span>
+        <a href="contact.html">Contact</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
 
-    <section class="section">
-      <div class="recipe-hero">
-        <div class="card">
-          <div class="card-body">
-            <div class="kicker">Ingredients</div>
-            <ul class="list">
+  <!-- Breadcrumb -->
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="recipes.html">Recipes</a>
+      <span>›</span>
+      Creamy Garlic Pasta
+    </div>
+  </div>
+
+  <!-- Recipe Detail -->
+  <section class="recipe-detail">
+    <div class="container">
+      <div class="recipe-detail-header">
+        <div class="recipe-detail-img">
+          <img src="images/creamy-garlic-pasta.jpg" alt="Creamy Garlic Pasta">
+        </div>
+        <div class="recipe-detail-info">
+          <h1>Creamy Garlic Pasta</h1>
+          <p>A rich and comforting pasta dish made with garlic, cream, and parmesan cheese — perfect for an easy weeknight meal.</p>
+
+          <div class="recipe-meta-bar">
+            <div class="meta-item">
+              <span class="icon">⏱</span>
+              <strong>20 minutes</strong>
+            </div>
+            <div class="meta-item">
+              <span class="icon">🍽</span>
+              <strong>Serves 2-3</strong>
+            </div>
+            <div class="meta-item">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <strong>4.8</strong>
+              <span>(78 reviews)</span>
+            </div>
+          </div>
+
+          <!-- Ingredients -->
+          <div class="ingredients-section">
+            <h2>Ingredients</h2>
+            <ul class="ingredients-list">
               <li>8 oz spaghetti or fettuccine</li>
               <li>2 tbsp butter</li>
               <li>4 cloves garlic, minced</li>
               <li>1 cup heavy cream</li>
-              <li>½ cup grated parmesan cheese</li>
+              <li>&frac34; cup grated parmesan cheese</li>
               <li>Salt and pepper to taste</li>
               <li>Fresh parsley (optional)</li>
             </ul>
           </div>
         </div>
-
-        <div class="card">
-          <img src="https://placehold.co/900x600?text=Creamy+Garlic+Pasta" alt="Creamy Garlic Pasta">
-        </div>
       </div>
 
-      <div class="two-col" style="margin-top:14px;">
-        <div class="card">
-          <div class="card-body">
-            <div class="kicker">Instructions</div>
-            <ol class="steps">
-              <li>Cook pasta according to package instructions and set aside.</li>
-              <li>Melt butter in a pan over medium heat and sauté garlic until fragrant.</li>
-              <li>Add heavy cream and simmer for 2–3 minutes.</li>
-              <li>Stir in parmesan cheese until melted and smooth. Season with salt and pepper.</li>
-            </ol>
+      <!-- Instructions -->
+      <div class="instructions-section">
+        <h2>Instructions</h2>
+        <div class="instructions-list">
+          <div class="instruction-step">
+            <div class="step-number">1</div>
+            <div class="step-text">Cook pasta according to package instructions and set aside.</div>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <div class="kicker">Tips</div>
-            <p class="p">For extra flavor, add a squeeze of lemon or a pinch of red pepper flakes. Garnish with parsley and more parmesan.</p>
+          <div class="instruction-step">
+            <div class="step-number">2</div>
+            <div class="step-text">Melt butter in a pan over medium heat and sauté garlic until fragrant.</div>
+          </div>
+          <div class="instruction-step">
+            <div class="step-number">3</div>
+            <div class="step-text">Add heavy cream and simmer for 2-3 minutes.</div>
+          </div>
+          <div class="instruction-step">
+            <div class="step-number">4</div>
+            <div class="step-text">Stir in parmesan cheese until melted and smooth. Season with salt and pepper to taste.</div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div>© 2026 Simply Savory</div>
-      <div><a href="about.html">About</a> · <a href="#">Contact</a></div>
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; 2026 Simply Savory</span>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </footer>
+
+  <script src="nav.js"></script>
 </body>
 </html>

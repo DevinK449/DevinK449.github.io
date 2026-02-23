@@ -1,161 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simply Savory | Home</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simply Savory — Delicious Meals Made Simple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-badge"></span>
-        <span class="brand-text">Simply Savory</span>
-      </a>
 
-      <nav class="nav">
-        <a class="active" href="index.html">Home</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🍽</span>
+        Simply Savory
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
         <a href="recipes.html">Recipes</a>
         <a href="categories.html">Categories</a>
         <a href="about.html">About</a>
-        <a href="#">Contact</a>
-      </nav>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <h1>Delicious, High-Quality Meals Made Simple</h1>
-          <p>Discover quick, delicious recipes for everyday cooking. Find simple and speedy meals for busy days.</p>
-
-          <div class="hero-actions">
-            <a class="btn" href="recipes.html">Browse Recipes</a>
-            <a class="btn btn-outline" href="categories.html">Explore Categories</a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <div class="stat-num">120+</div>
-              <div class="stat-label">Recipes</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">10 min</div>
-              <div class="stat-label">Quick Meals</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">Top Rated</div>
-              <div class="stat-label">Favorites</div>
-            </div>
-          </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Delicious, High-Quality<br><span>Meals Made Simple</span></h1>
+        <p>Discover quick, delicious recipes for everyday cooking. Find simple and speedy recipes for busy days.</p>
+        <a href="recipes.html" class="btn btn-primary">Browse Recipes &rarr;</a>
+      </div>
+      <div class="hero-images">
+        <div class="hero-img">
+          <img src="images/hero-salad-bowl.jpg" alt="Fresh salad bowl">
         </div>
-
-        <div class="hero-right">
-          <!-- Replace with your image file if you want -->
-          <img src="https://placehold.co/1200x800?text=Hero+Food+Image" alt="Food hero image">
+        <div class="hero-img">
+          <img src="images/hero-pizza.jpg" alt="Fresh pizza">
+        </div>
+        <div class="hero-img">
+          <img src="images/hero-eggs-toast.jpg" alt="Eggs and toast">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Combined Explore Section (this replaces BOTH old sections) -->
-    <section class="explore">
-      <div class="container">
-        <h2 class="explore-title">
-          <span class="line"></span>
-          Explore Our Categories
-          <span class="line"></span>
-        </h2>
-
-        <div class="explore-grid">
-          <a class="explore-card" href="recipes.html">
-            <img src="images/recipes.jpg" alt="Recipes">
-            <div class="explore-body">
-              <h3>Recipes</h3>
-              <p>Discover a variety of delicious recipes.</p>
-            </div>
-          </a>
-
-          <a class="explore-card" href="categories.html">
-            <img src="images/categories.jpg" alt="Categories">
-            <div class="explore-body">
-              <h3>Categories</h3>
-              <p>Browse by Breakfast, Lunch, Dinner, and more.</p>
-            </div>
-          </a>
-
-          <a class="explore-card" href="recipes.html">
-            <img src="images/popular.jpg" alt="Popular">
-            <div class="explore-body">
-              <h3>Popular</h3>
-              <p>Check out our most loved recipes.</p>
-            </div>
-          </a>
-
-          <a class="explore-card" href="categories.html">
-            <img src="images/quick-easy.jpg" alt="Quick & Easy">
-            <div class="explore-body">
-              <h3>Quick &amp; Easy</h3>
-              <p>Find simple and speedy recipes for busy days.</p>
-            </div>
-          </a>
-        </div>
+  <!-- Explore Categories -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Browse By</span>
+        <h2>Explore Our Categories</h2>
       </div>
-    </section>
+      <div class="categories-grid">
+        <a href="categories.html" class="category-card">
+          <img src="images/pancakes.jpg" alt="Recipes">
+          <div class="card-overlay">
+            <h3>Recipes</h3>
+          </div>
+        </a>
+        <a href="categories.html" class="category-card">
+          <img src="images/categories-dinner.jpg" alt="Categories">
+          <div class="card-overlay">
+            <h3>Categories</h3>
+          </div>
+        </a>
+        <a href="recipes.html" class="category-card">
+          <img src="images/categories-popular.jpg" alt="Popular">
+          <div class="card-overlay">
+            <h3>Popular</h3>
+          </div>
+        </a>
+        <a href="recipes.html" class="category-card">
+          <img src="images/quick-easy.jpg" alt="Quick & Easy">
+          <div class="card-overlay">
+            <h3>Quick &amp; Easy</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Featured Recipes -->
-    <section class="featured">
-      <div class="container">
-        <h2 class="section-title">Featured Recipes</h2>
-        <p class="section-subtitle">A few popular picks to get you started.</p>
-
-        <div class="recipe-grid">
-          <a class="recipe-card" href="recipe.html">
-            <img src="images/garlic-pasta.jpg" alt="Creamy Garlic Pasta">
-            <div class="recipe-body">
-              <div class="meta">20 mins · 4.8 (78)</div>
-              <h3>Creamy Garlic Pasta</h3>
-              <p>Rich and creamy pasta with fresh garlic and parmesan.</p>
+  <!-- Featured Recipes -->
+  <section class="section" style="background: var(--color-bg-warm);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Top Picks</span>
+        <h2>Featured Recipes</h2>
+      </div>
+      <div class="featured-grid">
+        <!-- First item is clickable to recipe detail page -->
+        <a href="recipe.html" class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/creamy-garlic-pasta.jpg" alt="Creamy Garlic Pasta">
+            <span class="recipe-card-time">20 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Creamy Garlic Pasta</h3>
+            <p>Rich and creamy pasta with fresh garlic and parmesan.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">4.8</span>
+              <span>(78 reviews)</span>
             </div>
-          </a>
-
-          <a class="recipe-card" href="recipes.html">
-            <img src="images/chicken-stirfry.jpg" alt="Chicken Stir-Fry">
-            <div class="recipe-body">
-              <div class="meta">25 mins · 4.7 (64)</div>
-              <h3>Chicken Stir-Fry</h3>
-              <p>Quick and healthy stir fry packed with vegetables.</p>
+          </div>
+        </a>
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/chicken-stir-fry.jpg" alt="Chicken Stir-Fry">
+            <span class="recipe-card-time">25 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Chicken Stir-Fry</h3>
+            <p>Quick and healthy stir fry packed with vegetables.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">4.7</span>
+              <span>(65 reviews)</span>
             </div>
-          </a>
-
-          <a class="recipe-card" href="recipes.html">
+          </div>
+        </div>
+        <div class="recipe-card">
+          <div class="recipe-card-img">
             <img src="images/pancakes.jpg" alt="Classic Pancakes">
-            <div class="recipe-body">
-              <div class="meta">20 mins · 4.9 (102)</div>
-              <h3>Classic Pancakes</h3>
-              <p>Fluffy pancakes topped with fresh fruit and syrup.</p>
+            <span class="recipe-card-time">20 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Classic Pancakes</h3>
+            <p>Fluffy homemade pancakes topped with fresh fruit.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">4.9</span>
+              <span>(112 reviews)</span>
             </div>
-          </a>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div>© 2026 Simply Savory</div>
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; 2026 Simply Savory</span>
       <div class="footer-links">
         <a href="about.html">About</a>
-        <span>·</span>
-        <a href="#">Contact</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
+
+  <script src="nav.js"></script>
 </body>
 </html>
-
