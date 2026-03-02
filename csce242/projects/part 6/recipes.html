@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipes — Simply Savory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🍽</span>
+        Simply Savory
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="recipes.html" class="active">Recipes</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb" style="text-align:left;">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        Recipes
+      </div>
+      <h1>Recipes</h1>
+      <p>Discover a variety of delicious and easy-to-follow recipes for every occasion.</p>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Breakfast</button>
+        <button class="filter-btn">Lunch</button>
+        <button class="filter-btn">Dinner</button>
+        <button class="filter-btn">Pasta</button>
+        <button class="filter-btn">Chicken</button>
+        <button class="filter-btn">Vegetarian</button>
+        <button class="filter-btn">Soups</button>
+        <button class="filter-btn">Quick &amp; Easy</button>
+        <button class="filter-btn">Desserts</button>
+      </div>
+
+      <!-- Recipes Grid -->
+      <div class="recipes-grid" style="margin-top: 36px;">
+        <!-- First item is clickable to recipe detail -->
+        <a href="recipe.html" class="recipe-card">
+  <div class="recipe-card-img">
+    <img src="images/creamy-garlic-pasta.jpg" alt="Creamy Garlic Pasta">
+    <span class="recipe-card-time">20 min</span>
+  </div>
+  <div class="recipe-card-body">
+    <h3>Creamy Garlic Pasta</h3>
+    <p>Rich and creamy pasta with fresh garlic and parmesan.</p>
+    <div class="recipe-card-meta">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="rating">4.8</span>
+      <span>(78)</span>
+    </div>
+  </div>
+</a>
+
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/pancakes.jpg" alt="Easy Pancakes">
+            <span class="recipe-card-time">5 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Easy Pancakes</h3>
+            <p>Light, fluffy pancakes perfect for a quick and delicious breakfast.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">5.0</span>
+              <span>(98)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/lemon-garlic-shrimp.jpg" alt="Lemon Garlic Shrimp">
+            <span class="recipe-card-time">10 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Lemon Garlic Shrimp</h3>
+            <p>A light and zesty pasta dish with shrimp, lemon, and garlic.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">4.8</span>
+              <span>(98)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/caprese-salad.jpg" alt="Caprese Salad">
+            <span class="recipe-card-time">10 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Caprese Salad</h3>
+            <p>A fresh Italian salad made with tomatoes, mozzarella, and basil.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              <span class="rating">4.7</span>
+              <span>(56)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/chicken-rice.jpg" alt="One-Pot Chicken and Rice">
+            <span class="recipe-card-time">10 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>One-Pot Chicken and Rice</h3>
+            <p>A one-pot meal that's savory, hearty, and easy to make.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">4.9</span>
+              <span>(102)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/cheesy-baked-ziti.jpg" alt="Cheesy Baked Ziti">
+            <span class="recipe-card-time">15 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Cheesy Baked Ziti</h3>
+            <p>A comforting, cheesy baked pasta dish with a rich tomato sauce.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">4.8</span>
+              <span>(89)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/vegetable-stir-fry.jpg" alt="Vegetable Stir Fry">
+            <span class="recipe-card-time">10 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Vegetable Stir Fry</h3>
+            <p>A quick, colorful stir fry loaded with fresh vegetables in a savory sauce.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">4.8</span>
+              <span>(83)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/guacamole.jpg" alt="Homemade Guacamole">
+            <span class="recipe-card-time">3 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Homemade Guacamole</h3>
+            <p>A fresh and easy guacamole recipe made with ripe avocados.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">4.8</span>
+              <span>(74)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-img">
+            <img src="images/chocolate-chip-cookies.jpg" alt="Chocolate Chip Cookies">
+            <span class="recipe-card-time">60 min</span>
+          </div>
+          <div class="recipe-card-body">
+            <h3>Chocolate Chip Cookies</h3>
+            <p>Classic, soft, and chewy chocolate chip cookies with crispy edges.</p>
+            <div class="recipe-card-meta">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating">5.0</span>
+              <span>(106)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="load-more-wrapper">
+        <button class="btn btn-outline">Load More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; 2026 Simply Savory</span>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="nav.js" defer></script>
+</body>
+</html>
