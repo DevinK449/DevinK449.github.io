@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Classes - Music Time</title>
+
+  <!-- W3CSS for modal -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="page">
+    <h1>Classes</h1>
+    <h2>Music Time</h2>
+
+    <main id="gallery" class="gallery"></main>
+
+    <p id="footer">@DevinKing.com</p>
+  </div>
+
+  <!-- Modal -->
+  <div id="songModal" class="w3-modal">
+    <div class="w3-modal-content modal-card">
+      <div class="modal-inner">
+        <div class="modal-left">
+          <iframe
+            id="modalVideo"
+            class="modal-video"
+            src=""
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="modal-right">
+          <button id="closeModalBtn" class="w3-button w3-display-topright close-btn">&times;</button>
+
+          <h3 id="modalTitle" class="modal-title"></h3>
+          <p id="modalArtist" class="modal-line"></p>
+          <p id="modalAlbum" class="modal-line"></p>
+          <p id="modalGenre" class="modal-line"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
