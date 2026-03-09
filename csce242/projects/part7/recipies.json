@@ -1,0 +1,112 @@
+[
+  {
+    "_id": 1,
+    "name": "Creamy Garlic Pasta",
+    "description": "Rich and creamy pasta with fresh garlic and parmesan.",
+    "time": "20 min",
+    "rating": "4.8",
+    "reviews": 78,
+    "category": "Pasta",
+    "img_name": "images/creamy-garlic-pasta.jpg",
+    "page": "recipe.html"
+  },
+  {
+    "_id": 2,
+    "name": "Easy Pancakes",
+    "description": "Light, fluffy pancakes perfect for a weekend breakfast.",
+    "time": "15 min",
+    "rating": "5.0",
+    "reviews": 134,
+    "category": "Breakfast",
+    "img_name": "images/pancakes.jpg",
+    "page": "recipe-pancakes.html"
+  },
+  {
+    "_id": 3,
+    "name": "Chicken Stir-Fry",
+    "description": "Quick and healthy stir-fry packed with colorful vegetables.",
+    "time": "25 min",
+    "rating": "4.7",
+    "reviews": 65,
+    "category": "Chicken",
+    "img_name": "images/chicken-stir-fry.jpg",
+    "page": "recipe-chicken-stir-fry.html"
+  },
+  {
+    "_id": 4,
+    "name": "Cheesy Baked Ziti",
+    "description": "Hearty baked pasta layered with ricotta, marinara, and melted mozzarella.",
+    "time": "45 min",
+    "rating": "4.8",
+    "reviews": 91,
+    "category": "Pasta",
+    "img_name": "images/cheesy-baked-ziti.jpg",
+    "page": "recipe-cheesy-baked-ziti.html"
+  },
+  {
+    "_id": 5,
+    "name": "Caprese Salad",
+    "description": "Fresh mozzarella, ripe tomatoes, and basil drizzled with olive oil.",
+    "time": "10 min",
+    "rating": "4.6",
+    "reviews": 47,
+    "category": "Lunch",
+    "img_name": "images/caprese-salad.jpg",
+    "page": "recipe-caprese-salad.html"
+  },
+  {
+    "_id": 6,
+    "name": "Lemon Garlic Shrimp",
+    "description": "Tender shrimp sautéed in a bright lemon garlic butter sauce.",
+    "time": "15 min",
+    "rating": "4.9",
+    "reviews": 102,
+    "category": "Quick & Easy",
+    "img_name": "images/lemon-garlic-shrimp.jpg",
+    "page": "recipe-lemon-garlic-shrimp.html"
+  },
+  {
+    "_id": 7,
+    "name": "Chocolate Chip Cookies",
+    "description": "Soft and chewy cookies loaded with melty chocolate chips.",
+    "time": "25 min",
+    "rating": "5.0",
+    "reviews": 210,
+    "category": "Desserts",
+    "img_name": "images/chocolate-chip-cookies.jpg",
+    "page": "recipe-chocolate-chip-cookies.html"
+  },
+  {
+    "_id": 8,
+    "name": "Vegetable Stir-Fry",
+    "description": "Savory mix of fresh vegetables tossed in a light soy ginger sauce.",
+    "time": "15 min",
+    "rating": "4.6",
+    "reviews": 58,
+    "category": "Vegetarian",
+    "img_name": "images/vegetable-stir-fry.jpg",
+    "page": "recipe-vegetable-stir-fry.html"
+  },
+  {
+    "_id": 9,
+    "name": "Tuscan Chicken",
+    "description": "Creamy sun-dried tomato chicken with spinach and parmesan.",
+    "time": "30 min",
+    "rating": "4.8",
+    "reviews": 83,
+    "category": "Chicken",
+    "img_name": "images/tuscan-chicken.jpg",
+    "page": "recipe-tuscan-chicken.html"
+  },
+  {
+    "_id": 10,
+    "name": "Chicken Rice Bowl",
+    "description": "Seasoned chicken over fluffy rice with fresh toppings and savory sauce.",
+    "time": "25 min",
+    "rating": "4.7",
+    "reviews": 119,
+    "category": "Dinner",
+    "img_name": "images/chicken-rice.jpg",
+    "page": "recipe-chicken-rice.html"
+  }
+]
