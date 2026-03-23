@@ -1,99 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Easy Pancakes — Simply Savory</title>
-  <link rel="stylesheet" href="styles.css?v=8">
+  <title>CSCE 242 - Devin King</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-icon">🍽</span>
-        Simply Savory
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="recipes.html" class="active">Recipes</a>
-        <a href="categories.html">Categories</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-overlay" id="navOverlay"></div>
-  </nav>
+  <div id="container">
+    <h1 id="title">CSCE 242: Web Applications</h1>
 
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>›</span>
-      <a href="recipes.html">Recipes</a>
-      <span>›</span>
-      Easy Pancakes
+    <p id="description">
+      This site contains my assignments and projects for CSCE 242.
+    </p>
+
+    <p id="repo">
+      GitHub Repo:
+      <a href="https://github.com/DevinK449/DevinK449.github.io/tree/master/csce242">
+        View Code
+      </a>
+    </p>
+
+    <h2>Assignments</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Assignment 1</h3>
+        <img src="https://dummyimage.com/300x150/cccccc/000000.png&text=Assignment+1" alt="Assignment 1 preview">
+        <p>Basic HTML page using common tags.</p>
+        <a href="csce242/assignments/assignment1/">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Assignment 2</h3>
+        <img src="images/spiderman.png" alt="Assignment 2 preview">
+        <p>Styled a webpage using CSS.</p>
+        <a href="csce242/assignments/assignment2/">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Flexbox Layout</h3>
+        <img src="images/flexbox.png" alt="Flexbox preview">
+        <p>Responsive layout using Flexbox.</p>
+        <a href="csce242/assignments/flexbox/">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Assignment 7</h3>
+        <img src="images/assignment7.png" alt="Assignment 7 preview">
+        <p>Introduction to JavaScript interactions and responsive layout.</p>
+        <a href="csce242/assignments/assignment7/">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Assignment 8</h3>
+        <img src="images/assignment8.png" alt="Assignment 8 preview">
+        <p>If statements, conditionals, and dynamic page updates.</p>
+        <a href="csce242/assignments/assignment8/">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Assignment 10</h3>
+        <img src="images/assignment10.png" alt="Assignment 10 preview">
+        <p>Arrays: pick a mood to display songs and play a YouTube video.</p>
+        <a href="csce242/assignments/assignment10/">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Assignment 11</h3>
+        <img src="images/assignment11.png" alt="Assignment 11 preview">
+        <p>JavaScript classes: dynamic song gallery with modal popup.</p>
+        <a href="csce242/assignments/assignment11/">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Fish Tank</h3>
+        <img src="images/fishtank.png" alt="Fish Tank preview">
+        <p>CSS Art fish bowl with animated bubbles using JavaScript.</p>
+        <a href="csce242/assignments/fishtank/">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Hello World Server (Render)</h3>
+        <img src="https://dummyimage.com/300x150/cccccc/000000.png&text=Hello+World+Server" alt="Hello World Server preview">
+        <p>Node + Express "Hello World" deployed on Render.</p>
+        <p>
+          <a href="https://github.com/DevinK449/ServerSideCoding" target="_blank">GitHub Repo</a>
+          |
+          <a href="https://serversidecoding.onrender.com" target="_blank">Live Server</a>
+        </p>
+      </div>
+    </div>
+
+    <h2>Projects</h2>
+
+    <div class="cards">
+
+      <!-- PART 8 - REACT -->
+      <div class="card">
+        <h3>Project: Simply Savory (Part 8 - React)</h3>
+        <img src="images/simplysavory.png" alt="Simply Savory React preview">
+        <p>
+          Converted my Simply Savory recipe website into a React application.
+        </p>
+        <p>
+          <a href="https://devink449.github.io/SimpleSavory-React/" target="_blank">View Live Site</a>
+          |
+          <a href="https://github.com/DevinK449/SimpleSavory-React" target="_blank">GitHub Repo</a>
+        </p>
+      </div>
+
+      <!-- PART 7 -->
+      <div class="card">
+        <h3>Project: Simply Savory (Part 7)</h3>
+        <img src="images/simplysavory.png" alt="Simply Savory Part 7 preview">
+        <p>
+          Updated version of my Simply Savory recipe website with JSON recipe parsing,
+          a working contact form, responsive iframe integration, improved homepage hover effects,
+          and updated JavaScript interactions based on feedback.
+        </p>
+        <a href="csce242/projects/part7/">View Project</a>
+      </div>
+
+      <!-- PART 6 -->
+      <div class="card">
+        <h3>Project: Simply Savory (Part 6)</h3>
+        <img src="images/simplysavory.png" alt="Simply Savory website preview">
+        <p>
+          Final version of my Simply Savory recipe website.
+          Includes a responsive design, working mobile navigation toggle,
+          and JavaScript interactivity.
+        </p>
+        <a href="csce242/projects/part6/">View Project</a>
+      </div>
+
+      <!-- PART 5 -->
+      <div class="card">
+        <h3>Project: Simply Savory (Part 5)</h3>
+        <img src="images/simplysavory.png" alt="Simply Savory website preview">
+        <p>
+          Previous version of my project before final improvements.
+        </p>
+        <a href="csce242/projects/part5/">View Project</a>
+      </div>
+
+      <!-- WIREFRAME -->
+      <div class="card">
+        <h3>Simply Savory – Homepage Wireframe</h3>
+        <img src="csce242/assignments/wireframe/Frame.png" alt="Simply Savory wireframe preview">
+        <p>
+          A homepage wireframe for a recipe website designed in Figma.
+        </p>
+        <a href="csce242/assignments/wireframe/simply-savory-wireframe.pdf" target="_blank">
+          View Wireframe PDF
+        </a>
+      </div>
+
     </div>
   </div>
 
-  <section class="recipe-detail">
-    <div class="container">
-      <div class="recipe-detail-header">
-        <div class="recipe-detail-img">
-          <img src="images/pancakes.jpg" alt="Easy Pancakes">
-        </div>
-        <div class="recipe-detail-info">
-          <h1>Easy Pancakes</h1>
-          <p>Light, fluffy pancakes that come together in minutes — perfect for a relaxed weekend breakfast or a quick weekday treat.</p>
-          <div class="recipe-meta-bar">
-            <div class="meta-item"><span class="icon">⏱</span><strong>15 minutes</strong></div>
-            <div class="meta-item"><span class="icon">🍽</span><strong>Serves 2-4</strong></div>
-            <div class="meta-item">
-              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <strong>5.0</strong>
-              <span>(134 reviews)</span>
-            </div>
-          </div>
-          <div class="ingredients-section">
-            <h2>Ingredients</h2>
-            <ul class="ingredients-list">
-              <li>1 cup all-purpose flour</li>
-              <li>1 tbsp sugar</li>
-              <li>1 tsp baking powder</li>
-              <li>&frac12; tsp baking soda</li>
-              <li>&frac12; tsp salt</li>
-              <li>1 cup buttermilk</li>
-              <li>1 egg</li>
-              <li>2 tbsp melted butter</li>
-              <li>Maple syrup and fresh fruit to serve</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="instructions-section">
-        <h2>Instructions</h2>
-        <div class="instructions-list">
-          <div class="instruction-step"><div class="step-number">1</div><div class="step-text">Whisk together flour, sugar, baking powder, baking soda, and salt in a large bowl.</div></div>
-          <div class="instruction-step"><div class="step-number">2</div><div class="step-text">In a separate bowl, whisk buttermilk, egg, and melted butter together.</div></div>
-          <div class="instruction-step"><div class="step-number">3</div><div class="step-text">Pour the wet ingredients into the dry ingredients and stir until just combined — a few lumps are fine. Do not overmix.</div></div>
-          <div class="instruction-step"><div class="step-number">4</div><div class="step-text">Heat a non-stick skillet or griddle over medium heat and lightly grease with butter.</div></div>
-          <div class="instruction-step"><div class="step-number">5</div><div class="step-text">Pour about &frac14; cup of batter per pancake. Cook until bubbles form on the surface, then flip and cook 1-2 more minutes. Serve with maple syrup and fruit.</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <span class="footer-copy">&copy; 2026 Simply Savory</span>
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="nav.js" defer></script>
 </body>
 </html>
