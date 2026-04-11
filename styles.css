@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #fafafa;
-  color: #1e1e2e;
+  background-color: #0a0a0f;
+  color: #e2e8f0;
   line-height: 1.6;
 }
 
@@ -71,7 +71,7 @@ body {
 
 /* Section headers */
 h2 {
-  color: #1e1e2e;
+  color: #e2e8f0;
   font-size: 1.4rem;
   font-weight: 600;
   margin-top: 48px;
@@ -123,11 +123,11 @@ a:hover {
 
 /* Cards */
 .card {
-  background: #ffffff;
+  background: #1a1a2e;
   padding: 0;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #2d2d44;
   transition: transform 0.25s, box-shadow 0.25s;
   display: flex;
   flex-direction: column;
@@ -135,7 +135,7 @@ a:hover {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.12);
+  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.25);
 }
 
 .card img {
@@ -147,7 +147,7 @@ a:hover {
 }
 
 .card h3 {
-  color: #1e1e2e;
+  color: #e2e8f0;
   font-size: 1.05rem;
   font-weight: 600;
   padding: 18px 20px 0;

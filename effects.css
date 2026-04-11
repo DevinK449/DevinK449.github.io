@@ -1,0 +1,360 @@
+/* ============================================================
+   VANILLA REACTBITS EFFECTS
+   Converted from ReactBits (reactbits.dev) React components
+   to plain CSS/JS for use on any static HTML site.
+   ============================================================ */
+
+
+/* ============================================================
+   0. LIQUID ETHER BACKGROUND
+   Original: reactbits.dev/backgrounds/liquid-ether
+   ============================================================ */
+
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ============================================================
+   1. DECRYPTED TEXT
+   Original: reactbits.dev/text-animations/decrypted-text
+   ============================================================ */
+
+.decrypted-text {
+  display: inline-block;
+  white-space: pre-wrap;
+  cursor: default;
+}
+
+.decrypted-text .encrypted-char {
+  color: #94a3b8;
+  opacity: 0.7;
+}
+
+.decrypted-text .revealed-char {
+  color: inherit;
+}
+
+
+/* ============================================================
+   2. GLARE HOVER
+   Original: reactbits.dev/animations/glare-hover
+   ============================================================ */
+
+.glare-hover {
+  overflow: hidden;
+  position: relative;
+}
+
+.glare-hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--gh-angle, -45deg),
+    hsla(0, 0%, 0%, 0) 60%,
+    var(--gh-rgba, rgba(124, 58, 237, 0.7)) 70%,
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0) 100%
+  );
+  transition: var(--gh-duration, 650ms) ease;
+  background-size:
+    var(--gh-size, 250%) var(--gh-size, 250%),
+    100% 100%;
+  background-repeat: no-repeat;
+  background-position:
+    -100% -100%,
+    0 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.glare-hover:hover::before {
+  background-position:
+    100% 100%,
+    0 0;
+}
+
+
+/* ============================================================
+   3. BORDER GLOW
+   Original: reactbits.dev (BorderGlow component)
+   ============================================================ */
+
+.border-glow-card {
+  --edge-proximity: 0;
+  --cursor-angle: 45deg;
+  --edge-sensitivity: 15;
+  --color-sensitivity: calc(var(--edge-sensitivity) + 10);
+  --glow-padding: 50px;
+  --cone-spread: 25;
+  --fill-opacity: 0.5;
+
+  /* Gradient colors - matching site's purple/pink theme */
+  --gradient-one: radial-gradient(at 80% 55%, #7c3aed 0px, transparent 50%);
+  --gradient-two: radial-gradient(at 69% 34%, #ec4899 0px, transparent 50%);
+  --gradient-three: radial-gradient(at 8% 6%, #38bdf8 0px, transparent 50%);
+  --gradient-four: radial-gradient(at 41% 38%, #7c3aed 0px, transparent 50%);
+  --gradient-five: radial-gradient(at 86% 85%, #ec4899 0px, transparent 50%);
+  --gradient-six: radial-gradient(at 82% 18%, #38bdf8 0px, transparent 50%);
+  --gradient-seven: radial-gradient(at 51% 4%, #ec4899 0px, transparent 50%);
+  --gradient-base: linear-gradient(#7c3aed 0 100%);
+
+  /* Glow color vars - purple, boosted for light backgrounds */
+  --glow-color: hsl(270deg 90% 55% / 100%);
+  --glow-color-60: hsl(270deg 90% 55% / 80%);
+  --glow-color-50: hsl(270deg 90% 55% / 70%);
+  --glow-color-40: hsl(270deg 90% 55% / 60%);
+  --glow-color-30: hsl(270deg 90% 55% / 50%);
+  --glow-color-20: hsl(270deg 90% 55% / 40%);
+  --glow-color-10: hsl(270deg 90% 55% / 25%);
+
+  position: relative;
+  isolation: isolate;
+  transform: translate3d(0, 0, 0.01px);
+  overflow: visible;
+}
+
+.border-glow-card::before,
+.border-glow-card::after,
+.border-glow-card > .edge-light {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: opacity 0.25s ease-out;
+  z-index: -1;
+}
+
+.border-glow-card:not(:hover)::before,
+.border-glow-card:not(:hover)::after,
+.border-glow-card:not(:hover) > .edge-light {
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
+}
+
+/* Colored mesh-gradient border */
+.border-glow-card::before {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--card-bg, #1a1a2e) 0 100%) padding-box,
+    linear-gradient(rgb(255 255 255 / 0%) 0% 100%) border-box,
+    var(--gradient-one) border-box,
+    var(--gradient-two) border-box,
+    var(--gradient-three) border-box,
+    var(--gradient-four) border-box,
+    var(--gradient-five) border-box,
+    var(--gradient-six) border-box,
+    var(--gradient-seven) border-box,
+    var(--gradient-base) border-box;
+
+  opacity: calc((var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
+
+  mask-image:
+    conic-gradient(
+      from var(--cursor-angle) at center,
+      black calc(var(--cone-spread) * 1%),
+      transparent calc((var(--cone-spread) + 15) * 1%),
+      transparent calc((100 - var(--cone-spread) - 15) * 1%),
+      black calc((100 - var(--cone-spread)) * 1%)
+    );
+}
+
+/* Colored mesh-gradient background fill */
+.border-glow-card::after {
+  border: 1px solid transparent;
+  background:
+    var(--gradient-one) padding-box,
+    var(--gradient-two) padding-box,
+    var(--gradient-three) padding-box,
+    var(--gradient-four) padding-box,
+    var(--gradient-five) padding-box,
+    var(--gradient-six) padding-box,
+    var(--gradient-seven) padding-box,
+    var(--gradient-base) padding-box;
+
+  mask-image:
+    linear-gradient(to bottom, black, black),
+    radial-gradient(ellipse at 50% 50%, black 40%, transparent 65%),
+    radial-gradient(ellipse at 66% 66%, black 5%, transparent 40%),
+    radial-gradient(ellipse at 33% 33%, black 5%, transparent 40%),
+    radial-gradient(ellipse at 66% 33%, black 5%, transparent 40%),
+    radial-gradient(ellipse at 33% 66%, black 5%, transparent 40%),
+    conic-gradient(from var(--cursor-angle) at center, transparent 5%, black 15%, black 85%, transparent 95%);
+
+  mask-composite: subtract, add, add, add, add, add;
+  -webkit-mask-composite: source-out, source-over, source-over, source-over, source-over, source-over;
+  opacity: calc(var(--fill-opacity) * (var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
+  mix-blend-mode: soft-light;
+}
+
+/* Outer glow layer */
+.border-glow-card > .edge-light {
+  inset: calc(var(--glow-padding) * -1);
+  pointer-events: none;
+  z-index: 1;
+
+  mask-image:
+    conic-gradient(
+      from var(--cursor-angle) at center, black 2.5%, transparent 10%, transparent 90%, black 97.5%
+    );
+
+  opacity: calc((var(--edge-proximity) - var(--edge-sensitivity)) / (100 - var(--edge-sensitivity)));
+  mix-blend-mode: plus-lighter;
+}
+
+.border-glow-card > .edge-light::before {
+  content: "";
+  position: absolute;
+  inset: var(--glow-padding);
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px var(--glow-color),
+    inset 0 0 1px 0 var(--glow-color-60),
+    inset 0 0 3px 0 var(--glow-color-50),
+    inset 0 0 6px 0 var(--glow-color-40),
+    inset 0 0 15px 0 var(--glow-color-30),
+    inset 0 0 25px 2px var(--glow-color-20),
+    inset 0 0 50px 2px var(--glow-color-10),
+    0 0 1px 0 var(--glow-color-60),
+    0 0 3px 0 var(--glow-color-50),
+    0 0 6px 0 var(--glow-color-40),
+    0 0 15px 0 var(--glow-color-30),
+    0 0 25px 2px var(--glow-color-20),
+    0 0 50px 2px var(--glow-color-10);
+}
+
+.border-glow-inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+}
+
+
+/* ============================================================
+   4. SCROLL REVEAL
+   Cards fade + slide up as they enter the viewport
+   ============================================================ */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger cards in the same row */
+.scroll-reveal:nth-child(3n+2) {
+  transition-delay: 0.1s;
+}
+
+.scroll-reveal:nth-child(3n+3) {
+  transition-delay: 0.2s;
+}
+
+/* ============================================================
+   6. STAR BORDER
+   Original: reactbits.dev/animations/star-border
+   ============================================================ */
+
+.star-border-container {
+  display: inline-block;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 3.5px 0;
+}
+
+.star-border-container .border-gradient-bottom,
+.star-border-container .border-gradient-top {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.star-border-container .border-gradient-bottom {
+  bottom: 0;
+  right: -250%;
+  background: radial-gradient(circle, #a78bfa, transparent 10%);
+  animation: star-movement-bottom 6s linear infinite alternate;
+}
+
+.star-border-container .border-gradient-top {
+  top: 0;
+  left: -250%;
+  background: radial-gradient(circle, #a78bfa, transparent 10%);
+  animation: star-movement-top 6s linear infinite alternate;
+}
+
+@keyframes star-movement-bottom {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes star-movement-top {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+.star-border-container .star-border-inner {
+  position: relative;
+  z-index: 1;
+  background: #1a1a2e;
+  border: 1px solid #2d2d44;
+  border-radius: 6px;
+  padding: 8px 20px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.star-border-container .star-border-inner:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+/* Once revealed, remove transform transition so tilt can take over */
+.scroll-reveal.revealed.tilt-ready {
+  transition: none;
+}
+
+
+/* ============================================================
+   5. TILT EFFECT
+   Cards tilt in 3D toward the cursor on hover
+   ============================================================ */
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+.tilt-card:hover {
+  /* override the existing translateY hover — tilt JS handles transform */
+  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.12);
+}
