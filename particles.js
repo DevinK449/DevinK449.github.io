@@ -7,13 +7,13 @@
 (function () {
   const CONFIG = {
     particleCount: 500,
-    particleSpread: 10,
+    particleSpread: 6,
     speed: 0.03,
-    particleColors: ['#DF1F2D', '#B11313', '#2B3784', '#447BBE'],
+    particleColors: ['#ffe556', '#00bcf0', '#ffffff'],
     moveParticlesOnHover: true,
     particleHoverFactor: 1,
-    alphaParticles: true,
-    particleBaseSize: 100,
+    alphaParticles: false,
+    particleBaseSize: 150,
     sizeRandomness: 1,
     cameraDistance: 20,
     disableRotation: false
